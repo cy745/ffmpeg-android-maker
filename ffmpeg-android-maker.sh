@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 
-# Defining essential directories
+# Example for ANDROID_NDK_HOME and ANDROID_SDK_HOME
+# export NDK_HOME="/Users/qiu/Library/Android/sdk/ndk/25.1.8937393"
+# export ANDROID_NDK_HOME=$NDK_HOME
+# export ANDROID_SDK_HOME=$NDK_HOME/../..
+
+if [ -z "$ANDROID_SDK_HOME" ]; then
+    echo "[error]Please provide you ANDROID_NDK_HOME and ANDROID_SDK_HOME first"
+fi
 
 # The root of the project
 export BASE_DIR="$( cd "$( dirname "$0" )" && pwd )"
