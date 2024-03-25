@@ -39,11 +39,11 @@ export BUILD_DIR_EXTERNAL=$BUILD_DIR/external
 # Function that copies *.so files and headers of the current ANDROID_ABI
 # to the proper place inside OUTPUT_DIR
 function prepareOutput() {
-  OUTPUT_LIB=${OUTPUT_DIR}/lib/${ANDROID_ABI}
+  OUTPUT_LIB=${OUTPUT_DIR}/${ANDROID_ABI}/lib
   mkdir -p ${OUTPUT_LIB}
   cp ${BUILD_DIR_FFMPEG}/${ANDROID_ABI}/lib/*.so ${OUTPUT_LIB}
 
-  OUTPUT_HEADERS=${OUTPUT_DIR}/include/${ANDROID_ABI}
+  OUTPUT_HEADERS=${OUTPUT_DIR}/${ANDROID_ABI}/include
   mkdir -p ${OUTPUT_HEADERS}
   cp -r ${BUILD_DIR_FFMPEG}/${ANDROID_ABI}/include/* ${OUTPUT_HEADERS}
 }
