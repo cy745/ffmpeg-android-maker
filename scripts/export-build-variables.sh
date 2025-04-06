@@ -86,6 +86,9 @@ FFMPEG_CONFIGURE_FLAGS=(
 #    --enable-pic
     --enable-small
 
+    --disable-shared
+    --enable-static
+
     --disable-doc
     --disable-debug
     --disable-avdevice
@@ -94,7 +97,7 @@ FFMPEG_CONFIGURE_FLAGS=(
     --disable-avformat
     --disable-swscale
     --disable-programs
-    --disable-rdft
+#    --disable-rdft
     --disable-ffmpeg
     --disable-ffprobe
     --disable-network
